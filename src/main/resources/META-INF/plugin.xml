@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>sample.project</id>
+    <name>Playing with PSI stuff project</name>
+    <version>0.0.1</version>
+    <vendor email="dummy" url="dummy">dummy</vendor>
+
+    <description>blah blah blah here it is. wooooooooooooooooooooooooooooooow...</description>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="MyPlugin.SampleMenu" text="Greetz" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="Myplugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
+        </group>
+        <group id="MyPlugin.TestingMenu" text="Testing" description="Testing Menu" popup = "true">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <action id="Myplugin.Test" class="TestAction" text="Test" description="Just testing"/>
+            <action id="MyPlugin.ParentRecur" class="ParentRecursionAction" text="Parents" description="Look up parents"/>
+            <action id="MyPlugin.SibsPeek" class="SiblingsPeekerAction" text="Siblings Peek" description="Peek at siblings"/>
+            <action id="MyPlugin.ChangeThing" class="ChangeSomethingAction" text="Change" description="Does a simple useless change"/>
+        </group>
+    </actions>
+</idea-plugin>
